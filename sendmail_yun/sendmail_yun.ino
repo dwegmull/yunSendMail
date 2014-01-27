@@ -48,7 +48,7 @@ void uploadScript() {
   File script = FileSystem.open("/tmp/sendmail.sh", FILE_WRITE);
   // Shell script header 
   script.print("#!/bin/sh\n");
-  script.print("echo -e \"FROM: test@wegmuller.org\nreply-to: david@wegmuller.org\nHello, world \" | ssmtp -vvv dwegmull94306@gmail.com\n");
+  script.print("echo -e \"FROM: test@example.com\nreply-to: test@example.com\nHello, world \" | ssmtp -vvv test@gmail.com\n");
   script.close();  // close the file
 
   // Make the script executable
